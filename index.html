@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karri Mohan — Computer Science Student</title>
+  <meta name="description" content="Portfolio of Karri Mohan — Computer Science student skilled in Python, Web Development, Data Structures & Algorithms (DSA), C Language (Basic), and DBMS (Basic).">
+  <meta property="og:title" content="Karri Mohan — CS Student Portfolio">
+  <meta property="og:description" content="Computer Science student skilled in Python, Web Development, DSA, C (Basic), and DBMS (Basic).">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== PRELOADER ==================== -->
+  <div id="preloader">
+    <div class="preloader-carbon-overlay"></div>
+    <div class="preloader-bg-glows">
+      <div class="preloader-glow-1"></div>
+      <div class="preloader-glow-2"></div>
+    </div>
+    <div class="preloader-content">
+      <div class="preloader-logo-wrapper">
+        <div class="preloader-logo">mohan<span>.dev</span></div>
+        <div class="preloader-m-stripes">
+          <div class="stripe stripe-light"></div>
+          <div class="stripe stripe-dark"></div>
+          <div class="stripe stripe-red"></div>
+        </div>
+      </div>
+      
+      <div class="preloader-gauge">
+        <div class="preloader-gauge-track">
+          <div class="preloader-gauge-fill" id="preloader-bar"></div>
+        </div>
+        <div class="preloader-stats">
+          <span class="preloader-status" id="preloader-status">Initializing Systems</span>
+          <span class="preloader-percentage" id="preloader-percentage">0%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Background Canvas -->
+  <canvas id="canvas-bg"></canvas>
+
+  <!-- Cursor Glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ==================== NAVIGATION ==================== -->
+  <nav class="navbar" id="navbar">
+    <a href="#" class="nav-logo">mohan<span>.dev</span></a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#about" class="active">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#resume-viewer">Resume</a>
+      <a href="#contact" class="nav-cta">Contact Me</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          Open to Internship Opportunities
+        </div>
+
+        <h1 class="hero-title">
+          <span class="line">Hi, I'm</span>
+          <span class="line"><span class="gradient-text">Karri Mohan</span></span>
+        </h1>
+
+        <p class="hero-description">
+          Aspiring developer passionate about Python, Web Development (HTML & CSS), and Data Structures & Algorithms (DSA). 
+          Building a strong foundation in C Language and DBMS to craft clean, efficient applications.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#skills" class="btn btn-primary">
+            Explore My Skills
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17l9.2-9.2M17 17V8H8"/></svg>
+          </a>
+          <a href="#resume-viewer" class="btn btn-secondary">
+            View CV
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-number" data-target="4">0</div>
+            <div class="stat-label">Core Skills</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="100">0</div>
+            <div class="stat-label">% Dedication</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <div class="hero-image-wrapper">
+          <img src="images/hero-cs.png" alt="Abstract coding environment illustration" id="heroImage">
+        </div>
+
+        <!-- Floating Cards -->
+        <div class="float-card float-card-1">
+          <div class="float-icon violet">🌐</div>
+          <div>
+            <div class="float-text-main">Web Development</div>
+            <div class="float-text-sub">HTML · CSS</div>
+          </div>
+        </div>
+        <div class="float-card float-card-2">
+          <div class="float-icon cyan">🐍</div>
+          <div>
+            <div class="float-text-main">Python & DSA</div>
+            <div class="float-text-sub">Coding · Algorithms</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT ==================== -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-text">
+        <div class="section-label reveal">About Me</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          A curious mind at the<br>
+          <span class="gradient-text">crossroads of code</span>
+        </h2>
+        <p class="reveal reveal-delay-2">
+          I'm Karri Mohan — a Computer Science student with a strong passion for 
+          problem-solving, Python coding, Data Structures & Algorithms (DSA), and Web Development.
+        </p>
+        <p class="reveal reveal-delay-3">
+          I focus on building clear programming fundamentals. My main stack includes 
+          Python, HTML & CSS for web development, alongside foundational knowledge 
+          in C Language and DBMS/SQL databases.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight-card reveal reveal-delay-1">
+            <div class="highlight-icon">🧠</div>
+            <h4>Problem Solver</h4>
+            <p>Analytical thinking to break down coding challenges</p>
+          </div>
+          <div class="highlight-card reveal reveal-delay-2">
+            <div class="highlight-icon">📚</div>
+            <h4>Quick Learner</h4>
+            <p>Constantly improving skills in Python, DSA & Web Dev</p>
+          </div>
+          <div class="highlight-card reveal reveal-delay-3">
+            <div class="highlight-icon">⏱️</div>
+            <h4>Time Management</h4>
+            <p>Efficiently managing academic tasks and coding practice</p>
+          </div>
+          <div class="highlight-card reveal reveal-delay-4">
+            <div class="highlight-icon">🤝</div>
+            <h4>Team Player</h4>
+            <p>Collaborative mindset for group projects & labs</p>
+          </div>
+        </div>
+
+        <!-- Spoken Languages -->
+        <div class="about-languages" style="margin-top: 36px;">
+          <div class="section-label reveal">Languages I Speak</div>
+          <div class="language-chips" style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px;">
+            <span class="course-chip reveal" style="background: rgba(124, 92, 252, 0.08); border-color: rgba(124, 92, 252, 0.15); color: var(--accent-1);">Telugu</span>
+            <span class="course-chip reveal reveal-delay-1" style="background: rgba(124, 92, 252, 0.08); border-color: rgba(124, 92, 252, 0.15); color: var(--accent-1);">English</span>
+            <span class="course-chip reveal reveal-delay-2" style="background: rgba(124, 92, 252, 0.08); border-color: rgba(124, 92, 252, 0.15); color: var(--accent-1);">Hindi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-interests">
+        <div class="section-label reveal">Interests</div>
+        <div class="interest-cards stagger-children">
+          <div class="interest-card reveal" style="--i:1">
+            <div class="interest-icon">🐍</div>
+            <div class="interest-name">Python Programming</div>
+          </div>
+          <div class="interest-card reveal" style="--i:2">
+            <div class="interest-icon">🌐</div>
+            <div class="interest-name">Web Development</div>
+          </div>
+          <div class="interest-card reveal" style="--i:3">
+            <div class="interest-icon">⚡</div>
+            <div class="interest-name">Data Structures & Algorithms</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS ==================== -->
+  <section class="skills-section" id="skills">
+    <div class="container">
+      <div class="section-label reveal">Technical Skills</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        My <span class="gradient-text">Tech Stack</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        The languages, tools, and technologies I've been learning and working with.
+      </p>
+
+      <div class="tech-cards">
+        <!-- Python -->
+        <div class="tech-card reveal" style="--i:1">
+          <div class="tech-card-glow python-glow"></div>
+          <div class="tech-card-header">
+            <div class="tech-logo python-logo">
+              <svg viewBox="0 0 128 128" width="42" height="42">
+                <linearGradient id="py-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)">
+                  <stop offset="0" stop-color="#5A9FD4"/><stop offset="1" stop-color="#306998"/>
+                </linearGradient>
+                <linearGradient id="py-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)">
+                  <stop offset="0" stop-color="#FFD43B"/><stop offset="1" stop-color="#FFE873"/>
+                </linearGradient>
+                <path fill="url(#py-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z"/>
+                <path fill="url(#py-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-name">Python</h3>
+              <span class="tech-level">Basic - Intermediate</span>
+            </div>
+          </div>
+          <p class="tech-desc">Basic programming, logic building, data manipulation, control flow, functions, and solving algorithmic problems.</p>
+          <div class="tech-topics">
+            <span class="tech-topic">Syntax & Logic</span>
+            <span class="tech-topic">Functions</span>
+            <span class="tech-topic">Data Structures</span>
+            <span class="tech-topic">Problem Solving</span>
+          </div>
+          <div class="tech-bar-wrapper">
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="70"></div></div>
+          </div>
+        </div>
+
+        <!-- HTML & CSS -->
+        <div class="tech-card reveal" style="--i:2">
+          <div class="tech-card-glow html-glow"></div>
+          <div class="tech-card-header">
+            <div class="tech-logo html-logo">
+              <svg viewBox="0 0 128 128" width="42" height="42">
+                <path fill="#E34F26" d="M14.7 13.5l10.3 100.9 39 10.8 39-10.8 10.3-100.9H14.7z"/>
+                <path fill="#EF652A" d="M64 116.5l31.5-8.7 8.3-90.8H64v99.5z"/>
+                <path fill="#EFEFEF" d="M64 47.9H47.4l-1.2-13.4H64v-13H31.3l3.5 39.4H64v-13zM64 87.2l-.1.1-14.1-3.8-.9-10.1H35.8l1.8 20.3 26.3 7.3.1-.1v-13.7z"/>
+                <path fill="#FFF" d="M64 34.5v13.4h15.4l-1.5 16.5H64v13h16.2l-1.6 18.2-14.6 3.9v13.8l26.9-7.5 3.7-41.9.1-1.3 2.9-33.1c.1-1 .1-2-.1-3H64z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-name">HTML & CSS</h3>
+              <span class="tech-level">Basic - Intermediate</span>
+            </div>
+          </div>
+          <p class="tech-desc">Semantic HTML5 tags, CSS styling, Flexbox, media queries, page structure, and creating responsive web page layouts.</p>
+          <div class="tech-topics">
+            <span class="tech-topic">HTML5</span>
+            <span class="tech-topic">CSS3</span>
+            <span class="tech-topic">Flexbox</span>
+            <span class="tech-topic">Web Design</span>
+          </div>
+          <div class="tech-bar-wrapper">
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+        </div>
+
+        <!-- C Language -->
+        <div class="tech-card reveal" style="--i:3">
+          <div class="tech-card-glow c-glow"></div>
+          <div class="tech-card-header">
+            <div class="tech-logo c-logo">
+              <svg viewBox="0 0 128 128" width="42" height="42">
+                <path fill="#659AD2" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"/>
+                <path fill="#03599C" d="M10.7 95.3c.5.8 1.2 1.5 1.8 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.5 62z"/>
+                <path fill="#fff" d="M85.3 76.4C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.3z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-name">C Language</h3>
+              <span class="tech-level">Basic</span>
+            </div>
+          </div>
+          <p class="tech-desc">Basic programming concepts, data types, control structures, loops, functions, arrays, and foundational logic.</p>
+          <div class="tech-topics">
+            <span class="tech-topic">Syntax</span>
+            <span class="tech-topic">Loops</span>
+            <span class="tech-topic">Functions</span>
+            <span class="tech-topic">Arrays</span>
+          </div>
+          <div class="tech-bar-wrapper">
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="55"></div></div>
+          </div>
+        </div>
+
+        <!-- DBMS -->
+        <div class="tech-card reveal" style="--i:4">
+          <div class="tech-card-glow dbms-glow"></div>
+          <div class="tech-card-header">
+            <div class="tech-logo dbms-logo">
+              <svg viewBox="0 0 128 128" width="42" height="42">
+                <path fill="#00618A" d="M2.001 90.458h4.108V73.026L14.239 90.458h3.535l8.2-17.577v17.577h4.108V65.821h-5.471l-8.416 18.146-8.632-18.146H2.001v24.637zM37.781 65.821h4.108v19.4h12.107v5.237H37.781V65.821z"/>
+                <path fill="#E48E00" d="M64.002 12c-27.614 0-50 9.402-50 21v82c0 11.598 22.386 21 50 21s50-9.402 50-21V33c0-11.598-22.386-21-50-21zm0 8c22.091 0 40 5.82 40 13s-17.909 13-40 13-40-5.82-40-13 17.909-13 40-13zm40 87c0 7.18-17.909 13-40 13s-40-5.82-40-13V48.363C32.156 54.56 46.748 58 64.002 58s31.846-3.44 40-9.637V107z"/>
+                <ellipse fill="#E48E00" cx="64" cy="33" rx="40" ry="13"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="tech-name">DBMS & SQL</h3>
+              <span class="tech-level">Basic</span>
+            </div>
+          </div>
+          <p class="tech-desc">Relational database basics, SQL queries, table creation, SELECT statements, primary/foreign keys, and data storage.</p>
+          <div class="tech-topics">
+            <span class="tech-topic">SQL Basics</span>
+            <span class="tech-topic">Tables</span>
+            <span class="tech-topic">Queries</span>
+            <span class="tech-topic">Database Fundamentals</span>
+          </div>
+          <div class="tech-bar-wrapper">
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="55"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Tools -->
+      <div class="tools-section">
+        <h3 class="tools-title reveal">Tools & Technologies I Use</h3>
+        <div class="tools-grid reveal reveal-delay-1">
+          <div class="tool-chip">
+            <span>👨‍🍳</span> CodeChef
+          </div>
+          <div class="tool-chip">
+            <span>🖥️</span> VS Code
+          </div>
+          <div class="tool-chip">
+            <span>🔧</span> Git & GitHub
+          </div>
+          <div class="tool-chip">
+            <span>🌐</span> HTML & CSS
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS ==================== -->
+  <section class="projects-section" id="projects">
+    <div class="container">
+      <div class="section-label reveal">Featured Work</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Featured <span class="gradient-text">Projects</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        Software projects built with focus on AI automation, modular design, and real-world problem solving.
+      </p>
+
+      <div class="projects-grid">
+        <div class="project-card reveal reveal-delay-1">
+          <div>
+            <div class="project-card-header">
+              <div class="project-icon">🤖</div>
+              <span class="project-date">Jun 2026</span>
+            </div>
+            <h3 class="project-title">Personal AI Assistant</h3>
+            <p class="project-desc">
+              Developed an intelligent, natural-language personal assistant designed to understand user requests and streamline daily productivity through smart automation.
+            </p>
+            <ul class="project-bullets">
+              <li>Built the user interface using HTML and CSS and implemented the assistant's core functionality and AI logic using Python.</li>
+              <li>Engineered natural-language interaction capabilities to interpret user queries and generate intelligent responses.</li>
+              <li>Integrated AI automation features to assist with everyday workflows and enhance personal efficiency.</li>
+              <li>Architected the system with a modular codebase, enabling seamless addition of new tools and integrations.</li>
+            </ul>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">HTML & CSS</span>
+            <span class="project-tag">AI Logic</span>
+            <span class="project-tag">Automation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION ==================== -->
+  <section class="experience" id="education">
+    <div class="container">
+      <div class="section-label reveal">Education</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        My <span class="gradient-text">Academic Journey</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        Building a strong foundation in Computer Science, one semester at a time.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">Since August 2025</div>
+          <div class="timeline-role">Bachelor of Technology — Computer Science & Engineering</div>
+          <div class="timeline-company">Lovely Professional University · Punjab, India</div>
+          <div class="timeline-desc">
+            Currently pursuing B.Tech in CSE with a <strong>CGPA of 8.00</strong>. Core coursework includes Data Structures & Algorithms, Python, DBMS, Web Development, Operating Systems, and Computer Networks.
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">April 2023 — March 2025</div>
+          <div class="timeline-role">Intermediate (Higher Secondary)</div>
+          <div class="timeline-company">Sri Chaitanya Junior College · Visakhapatnam, Andhra Pradesh</div>
+          <div class="timeline-desc">
+            Completed Intermediate education with <strong>87% Percentage</strong>. Developed strong analytical skills, mathematical reasoning, and logical problem-solving foundation.
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">April 2018 — March 2023</div>
+          <div class="timeline-role">Matriculation (Secondary Education)</div>
+          <div class="timeline-company">Sri Chaitanya Techno Curriculum · Visakhapatnam, Andhra Pradesh</div>
+          <div class="timeline-desc">
+            Completed Secondary education with <strong>81% Percentage</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CERTIFICATIONS / ACHIEVEMENTS ==================== -->
+  <section class="certifications" id="certifications">
+    <div class="container">
+      <div class="section-label reveal">Achievements</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Certifications & <span class="gradient-text">Milestones</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        Always learning, always growing. Here are official certifications earned along my tech journey.
+      </p>
+
+      <div class="cert-grid">
+        <div class="cert-card reveal">
+          <div class="cert-icon">🔒</div>
+          <h4 class="cert-title">Cyber Security Workshop</h4>
+          <p class="cert-issuer">Lovely Professional University (Nov 2025 · Feb 2026)</p>
+          <p class="cert-desc"><strong>Outcome:</strong> Gained foundational knowledge of cyber threats and essential defensive practices.</p>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-1">
+          <div class="cert-icon">🐍</div>
+          <h4 class="cert-title">Python Learning</h4>
+          <p class="cert-issuer">Infosys (Aug 2026)</p>
+          <p class="cert-desc"><strong>Outcome:</strong> Developed foundational Python programming skills and strengthened logical problem-solving abilities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== RESUME VIEWER ==================== -->
+  <section class="resume-section" id="resume-viewer">
+    <div class="container">
+      <div class="section-label reveal">Curriculum Vitae</div>
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 32px; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <h2 class="section-title reveal reveal-delay-1" style="margin-bottom: 0;">
+            My <span class="gradient-text">Resume</span>
+          </h2>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <a href="Mohan_cv.pdf" download="Karri_Mohan_Resume.pdf" class="btn btn-primary">
+            Download PDF
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CV Embed (Desktop) -->
+      <div class="resume-embed-container reveal reveal-delay-3" style="position: relative; width: 100%; height: 850px; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); background: var(--bg-card); box-shadow: var(--shadow-card);">
+        <iframe src="Mohan_cv.pdf" width="100%" height="100%" style="border: none;"></iframe>
+      </div>
+
+      <!-- Mobile Fallback (Hidden on Desktop by CSS) -->
+      <div class="resume-mobile-fallback reveal reveal-delay-3" style="display: none; text-align: center; padding: 48px 24px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);">
+        <div style="font-size: 3rem; margin-bottom: 16px;">📄</div>
+        <h4 style="font-size: 1.15rem; margin-bottom: 12px; font-family: var(--font-display);">View Karri Mohan's Resume</h4>
+        <p style="margin-bottom: 24px; color: var(--text-secondary); font-size: 0.9rem; max-width: 320px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+          PDF previewing inside the page is not supported on mobile devices. You can open the file in a new tab or download it directly.
+        </p>
+        <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
+          <a href="Mohan_cv.pdf" target="_blank" class="btn btn-primary" style="width: 100%; max-width: 220px; justify-content: center;">Open in New Tab</a>
+          <a href="Mohan_cv.pdf" download="Karri_Mohan_Resume.pdf" class="btn btn-secondary" style="width: 100%; max-width: 220px; justify-content: center;">Download PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-left">
+        <div class="section-label reveal">Get In Touch</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Let's <span class="gradient-text">connect</span><br>
+          and collaborate
+        </h2>
+        <p class="section-subtitle reveal reveal-delay-2">
+          Whether it's an internship opportunity, a collaboration, or just a chat 
+          about tech — I'd love to hear from you!
+        </p>
+
+        <div class="contact-info">
+          <div class="contact-item reveal reveal-delay-2">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Email</div>
+              <div class="contact-item-value"><a href="mailto:kmohankarri@gmail.com">kmohankarri@gmail.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item reveal reveal-delay-25">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Phone</div>
+              <div class="contact-item-value"><a href="tel:9581510947">9581510947</a></div>
+            </div>
+          </div>
+
+          <div class="contact-item reveal reveal-delay-3">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1116 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="contact-item-label">Location</div>
+              <div class="contact-item-value">Visakhapatnam, Andhra Pradesh</div>
+            </div>
+          </div>
+
+          <div class="social-links reveal reveal-delay-4">
+            <a href="https://github.com/kmohankarri" target="_blank" class="social-link" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            </a>
+            <a href="https://linkedin.com/in/mohan-karri" target="_blank" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <div class="form-group reveal">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group reveal reveal-delay-1">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="john@example.com" required>
+          </div>
+        </div>
+        <div class="form-group reveal reveal-delay-2">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" placeholder="Internship / Collaboration">
+        </div>
+        <div class="form-group reveal reveal-delay-3">
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Hi Karri, I'd like to connect about..." required></textarea>
+        </div>
+        <div class="form-submit reveal reveal-delay-4">
+          <button type="submit" class="btn btn-primary">
+            Send Message
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-text">
+        © 2026 <a href="#">mohan.dev</a> — Built with passion & code.
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
